@@ -8,9 +8,9 @@
 </head>
 
 <body>
-    <button onclick="playgame('rock');"><img class="photo" src ="scissor/rock.png"></button>
-    <button onclick="playgame('paper');"><img class="photo" src="scissor/paper.png"></button>
-    <button onclick="playgame('scissor');"><img class="photo" src="scissor/scissor.png"></button>
+    <button onclick="playgame('rock');"><img class="photo" src ="rock.png"></button>
+    <button onclick="playgame('paper');"><img class="photo" src="paper.png"></button>
+    <button onclick="playgame('scissor');"><img class="photo" src="scissor.png"></button>
     <button onclick="resetGame();">reset</button>
 
     <p class="results"></p>
@@ -71,8 +71,8 @@
 
             localStorage.setItem('score', JSON.stringify(score));
             document.querySelector('.results').innerHTML = result;
-            document.querySelector('.moves').innerHTML = `you picked <img  src ="scissor/${playermove}.png" class="photo" >`;
-            document.querySelector('.computer').innerHTML = `computer picked <img class="photo" src ="scissor/${computermove}.png">`;
+            document.querySelector('.moves').innerHTML = `you picked <img  src ="${playermove}.png" class="photo" >`;
+            document.querySelector('.computer').innerHTML = `computer picked <img class="photo" src ="${computermove}.png">`;
             document.querySelector('.scores').innerHTML = `wins: ${score.wins}, lost: ${score.lost}, tie: ${score.tie}`;
         }
 
